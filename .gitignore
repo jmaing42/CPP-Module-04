@@ -1,0 +1,14 @@
+.cache
+compile_commands.json
+.vscode/*
+!.vscode/settings.json
+
+ex00/*
+!ex00/Makefile
+!ex00/main.cpp
+!ex00/Animal.hpp
+!ex00/Animal.cpp
+!ex00/Dog.hpp
+!ex00/Dog.cpp
+!ex00/Cat.hpp
+!ex00/Cat.cpp
