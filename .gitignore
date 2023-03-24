@@ -12,3 +12,9 @@ ex00/*
 !ex00/Dog.cpp
 !ex00/Cat.hpp
 !ex00/Cat.cpp
+!ex00/WrongAnimal.hpp
+!ex00/WrongAnimal.cpp
+!ex00/WrongDog.hpp
+!ex00/WrongDog.cpp
+!ex00/WrongCat.hpp
+!ex00/WrongCat.cpp

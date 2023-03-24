@@ -12,7 +12,7 @@ public:
   Dog(const Dog &copy);
   Dog &operator=(const Dog &copy);
 
-  void makeSound() const;
+  virtual void makeSound() const;
 };
 
 #endif
