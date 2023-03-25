@@ -6,7 +6,10 @@
 Dog::Dog() : Animal("dog"), brain(new Brain) {
   std::cout << "Dog constructed" << std::endl;
 }
-Dog::~Dog() { std::cout << "Dog destructed" << std::endl; }
+Dog::~Dog() {
+  delete this->brain;
+  std::cout << "Dog destructed" << std::endl;
+}
 Dog::Dog(const Dog &copy) : Animal(copy.type), brain(new Brain(*copy.brain)) {
   std::cout << "Dog copy constructed" << std::endl;
 }

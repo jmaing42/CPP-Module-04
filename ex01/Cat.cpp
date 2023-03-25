@@ -6,7 +6,10 @@
 Cat::Cat() : Animal("cat"), brain(new Brain) {
   std::cout << "Cat constructed" << std::endl;
 }
-Cat::~Cat() { std::cout << "Cat destructed" << std::endl; }
+Cat::~Cat() {
+  delete this->brain;
+  std::cout << "Cat destructed" << std::endl;
+}
 Cat::Cat(const Cat &copy) : Animal(copy.type), brain(new Brain(*copy.brain)) {
   std::cout << "Cat copy constructed" << std::endl;
 }
