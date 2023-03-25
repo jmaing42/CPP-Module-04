@@ -1,5 +1,5 @@
 NAME = ex01
-OBJS = main.o Brain.o Animal.o Dog.o Cat.o WrongAnimal.o WrongDog.o WrongCat.o
+OBJS = main.o Brain.o Animal.o Dog.o Cat.o
 
 CXXFLAGS = -Wall -Wextra -Werror
 
