@@ -1,0 +1,22 @@
+#ifndef EX00_DOG_HPP_INCLUDED
+#define EX00_DOG_HPP_INCLUDED
+
+#include <string>
+
+#include "Animal.hpp"
+#include "Brain.hpp"
+
+class Dog : public Animal {
+private:
+  Brain *brain;
+
+public:
+  Dog();
+  ~Dog();
+  Dog(const Dog &copy);
+  Dog &operator=(const Dog &copy);
+
+  virtual void makeSound() const;
+};
+
+#endif
