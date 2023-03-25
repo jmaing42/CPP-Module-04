@@ -20,5 +20,6 @@ Dog &Dog::operator=(const Dog &copy) {
   this->brain = new Brain(tmp);
   return *this;
 }
+Brain &Dog::getBrain() { return *this->brain; }
 
 void Dog::makeSound() const { std::cout << "bark!" << std::endl; }

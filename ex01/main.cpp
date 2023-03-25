@@ -18,8 +18,24 @@ int main() {
   {
     Dog i = Dog();
     Dog j = Dog();
-    Dog *tmp = &i;
+    Dog *const tmp = &i;
+
+    j.getBrain().ideas[42] = "Hello world!";
     i = j;
+    i.getBrain().ideas[42] = "Bye world!";
+    std::cout << j.getBrain().ideas[42] << std::endl;
+    std::cout << i.getBrain().ideas[42] << std::endl;
     i = *tmp;
+  }
+  {
+    Animal **animals = new Animal *[84];
+    for (size_t i = 0; i < 42; i++) {
+      animals[i] = new Dog();
+      animals[42 + i] = new Cat();
+    }
+    for (size_t i = 0; i < 84; i++)
+      delete animals[i];
+
+    delete[] animals;
   }
 }
