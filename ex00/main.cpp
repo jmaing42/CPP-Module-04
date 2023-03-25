@@ -17,6 +17,9 @@ int main() {
     i->makeSound();
     j->makeSound();
     meta->makeSound();
+    delete meta;
+    delete i;
+    delete j;
   }
   {
     const Animal *meta = new Animal();
@@ -27,5 +30,8 @@ int main() {
     i->makeSound(); // will output the cat sound!
     j->makeSound();
     meta->makeSound();
+    delete meta;
+    delete i;
+    delete j;
   }
 }
