@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-WrongCat::WrongCat() : WrongAnimal("Wrongcat") {
+WrongCat::WrongCat() : WrongAnimal("WrongCat") {
   std::cout << "WrongCat constructed" << std::endl;
 }
 WrongCat::~WrongCat() { std::cout << "WrongCat destructed" << std::endl; }
