@@ -34,6 +34,8 @@ ex01/*
 ex02/*
 !ex02/Makefile
 !ex02/main.cpp
+!ex02/Brain.hpp
+!ex02/Brain.cpp
 !ex02/AAnimal.hpp
 !ex02/AAnimal.cpp
 !ex02/Dog.hpp
