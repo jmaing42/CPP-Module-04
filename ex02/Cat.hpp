@@ -1,5 +1,5 @@
-#ifndef EX00_CAT_HPP_INCLUDED
-#define EX00_CAT_HPP_INCLUDED
+#ifndef EX02_CAT_HPP_INCLUDED
+#define EX02_CAT_HPP_INCLUDED
 
 #include <string>
 

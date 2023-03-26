@@ -1,5 +1,5 @@
-#ifndef EX00_BRAIN_HPP_INCLUDED
-#define EX00_BRAIN_HPP_INCLUDED
+#ifndef EX01_BRAIN_HPP_INCLUDED
+#define EX01_BRAIN_HPP_INCLUDED
 
 #include <string>
 
