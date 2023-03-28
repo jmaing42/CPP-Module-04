@@ -16,9 +16,8 @@ public:
   CharacterInventory(const CharacterInventory &copy);
   CharacterInventory &operator=(const CharacterInventory &copy);
 
-  void put(AMateria *materia, Floor &floor);
-  void dispose(size_t index, Floor &floor);
-  const AMateria(*const (&getRaw())[4]);
+  AMateria(*(&getRaw())[4]);
+  AMateria(*const (&getRaw() const)[4]);
 };
 
 #endif

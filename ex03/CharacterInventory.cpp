@@ -4,32 +4,17 @@
 #include "CharacterInventory.hpp"
 
 CharacterInventory::CharacterInventory() : raw(new AMateria *[1][4]) {}
-CharacterInventory::~CharacterInventory() {
-  for (size_t i = 0; i < 4; i++)
-    delete (*this->raw)[i];
-  delete[] this->raw;
-}
+CharacterInventory::~CharacterInventory() { delete[] this->raw; }
 CharacterInventory::CharacterInventory(const CharacterInventory &copy)
     : raw(new AMateria *[1][4]) {
-  try {
-    for (size_t i = 0; i < 4; i++)
-      if ((*copy.raw)[i])
-        (*this->raw)[i] = (*copy.raw)[i]->clone();
-  } catch (const std::exception &e) {
-    for (size_t i = 0; i < 4; i++)
-      delete (*copy.raw)[i];
-    delete[] this->raw;
-    throw e;
-  }
+  this->operator=(copy);
 }
 CharacterInventory &
 CharacterInventory::operator=(const CharacterInventory &copy) {
-  CharacterInventory tmp = copy;
   for (size_t i = 0; i < 4; i++)
-    delete (*this->raw)[i];
-  std::memcpy(this->raw, tmp.raw, sizeof(*this->raw));
-  std::memset(tmp.raw, 0, sizeof(*tmp.raw));
+    (*this->raw)[i] = (*copy.raw)[i];
   return *this;
 }
 
-const AMateria(*const (&CharacterInventory::getRaw())[4]) { return *this->raw; }
+AMateria(*(&CharacterInventory::getRaw())[4]) { return *this->raw; }
+AMateria(*const (&CharacterInventory::getRaw() const)[4]) { return *this->raw; }
