@@ -11,10 +11,16 @@ CharacterInventory::~CharacterInventory() {
 }
 CharacterInventory::CharacterInventory(const CharacterInventory &copy)
     : raw(new AMateria *[1][4]) {
-  for (size_t i = 0; i < 4; i++)
-    if ((*copy.raw)[i])
-      (*this->raw)[i] = (*copy.raw)[i]->clone();
-  // TODO: fix leak
+  try {
+    for (size_t i = 0; i < 4; i++)
+      if ((*copy.raw)[i])
+        (*this->raw)[i] = (*copy.raw)[i]->clone();
+  } catch (const std::exception &e) {
+    for (size_t i = 0; i < 4; i++)
+      delete (*copy.raw)[i];
+    delete[] this->raw;
+    throw e;
+  }
 }
 CharacterInventory &
 CharacterInventory::operator=(const CharacterInventory &copy) {

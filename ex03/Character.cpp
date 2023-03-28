@@ -11,4 +11,7 @@ Character &Character::operator=(const Character &copy) {
   return *this;
 }
 
+const std::string &Character::getName() const { return this->name; }
+void equip(AMateria *m);
+
 // TODO:
