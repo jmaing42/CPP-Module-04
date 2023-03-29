@@ -1,8 +1,8 @@
 NAME = ex03
-OBJS = main.o AMateria.o
+OBJS = main.o AMateria.o Ice.o Cure.o Character.o Inventory.o Character.o MateriaSource.o
 
-CXXFLAGS = -Wall -Wextra -Werror
-
+CXXFLAGS = -Wall -Wextra -Werror -fsanitize=address -g
+LDFLAGS = -fsanitize=address
 
 all: $(NAME)
 .PHONY: all

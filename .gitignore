@@ -53,12 +53,10 @@ ex03/*
 !ex03/Ice.cpp
 !ex03/Cure.hpp
 !ex03/Cure.cpp
-!ex03/Floor.hpp
-!ex03/Floor.cpp
 !ex03/IMateriaSource.hpp
+!ex03/Inventory.hpp
+!ex03/Inventory.cpp
 !ex03/Character.hpp
 !ex03/Character.cpp
-!ex03/CharacterInventory.hpp
-!ex03/CharacterInventory.cpp
 !ex03/MateriaSource.hpp
 !ex03/MateriaSource.cpp

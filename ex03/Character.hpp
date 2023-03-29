@@ -4,13 +4,13 @@
 #include <string>
 
 #include "AMateria.hpp"
-#include "CharacterInventory.hpp"
 #include "ICharacter.hpp"
+#include "Inventory.hpp"
 
-class Character : ICharacter {
+class Character : public ICharacter {
 private:
   std::string name;
-  CharacterInventory inventory;
+  Inventory inventory;
 
 public:
   Character(std::string name = "<name>");

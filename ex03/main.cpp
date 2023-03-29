@@ -1,7 +1,11 @@
+#include <iostream>
+
 #include "AMateria.hpp"
+#include "Character.hpp"
 #include "Cure.hpp"
 #include "IMateriaSource.hpp"
 #include "Ice.hpp"
+#include "MateriaSource.hpp"
 
 int main() {
   {
@@ -19,6 +23,16 @@ int main() {
     me->use(1, *bob);
     delete bob;
     delete me;
+    delete src;
+  }
+  {
+    IMateriaSource *src = new MateriaSource();
+    src->learnMateria(new Ice());
+    src->learnMateria(new Ice());
+    src->learnMateria(new Ice());
+    src->learnMateria(new Ice());
+    src->learnMateria(new Cure());
+    std::cout << src->createMateria("cure") << std::endl;
     delete src;
   }
   return 0;

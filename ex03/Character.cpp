@@ -14,7 +14,7 @@ void Character::equip(AMateria *m) {
   AMateria **const raw = this->inventory.getRaw();
   for (size_t i = 0; i < 4; i++) {
     if (!raw[i]) {
-      raw[1] = m;
+      raw[i] = m;
       return;
     }
   }

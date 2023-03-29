@@ -5,6 +5,7 @@
 #include "ICharacter.hpp"
 
 Cure::Cure() : AMateria("cure") {}
+Cure::~Cure() {}
 Cure::Cure(const Cure &copy) : AMateria(copy) {}
 Cure &Cure::operator=(const Cure &copy) {
   static_cast<AMateria *>(this)->operator=(copy);

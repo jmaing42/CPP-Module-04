@@ -4,17 +4,16 @@
 #include <cstddef>
 
 #include "AMateria.hpp"
-#include "Floor.hpp"
 
-class CharacterInventory {
+class Inventory {
 private:
   AMateria *(*raw)[4];
 
 public:
-  CharacterInventory();
-  ~CharacterInventory();
-  CharacterInventory(const CharacterInventory &copy);
-  CharacterInventory &operator=(const CharacterInventory &copy);
+  Inventory();
+  ~Inventory();
+  Inventory(const Inventory &copy);
+  Inventory &operator=(const Inventory &copy);
 
   AMateria(*(&getRaw())[4]);
   AMateria(*const (&getRaw() const)[4]);
