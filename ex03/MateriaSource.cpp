@@ -1,3 +1,4 @@
+#include <cstddef>
 #include <string>
 
 #include "AMateria.hpp"
@@ -15,7 +16,7 @@ MateriaSource::MateriaSource(const MateriaSource &copy) {
 MateriaSource &MateriaSource::operator=(const MateriaSource &copy) {
   for (size_t i = 0; i < 4; i++) {
     delete this->inventory.getRaw()[i];
-    this->inventory.getRaw()[i] = nullptr;
+    this->inventory.getRaw()[i] = NULL;
     if (copy.inventory.getRaw()[i])
       this->inventory.getRaw()[i] = copy.inventory.getRaw()[i]->clone();
   }

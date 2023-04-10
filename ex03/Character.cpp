@@ -1,5 +1,7 @@
 #include "Character.hpp"
 
+#include <cstddef>
+
 Character::Character(std::string name) : name(name) {}
 Character::~Character() {}
 Character::Character(const Character &copy) : name(copy.name) {}
@@ -19,7 +21,7 @@ void Character::equip(AMateria *m) {
     }
   }
 }
-void Character::unequip(int idx) { this->inventory.getRaw()[idx] = nullptr; }
+void Character::unequip(int idx) { this->inventory.getRaw()[idx] = NULL; }
 void Character::use(int idx, ICharacter &target) {
   if (this->inventory.getRaw()[idx])
     this->inventory.getRaw()[idx]->use(target);

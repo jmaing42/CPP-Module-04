@@ -1,3 +1,4 @@
+#include <cstddef>
 #include <cstring>
 
 #include "AMateria.hpp"
@@ -5,7 +6,7 @@
 
 Inventory::Inventory() : raw(new AMateria *[1][4]) {
   for (size_t i = 0; i < 4; i++)
-    this->getRaw()[i] = nullptr;
+    this->getRaw()[i] = NULL;
 }
 Inventory::~Inventory() { delete[] this->raw; }
 Inventory::Inventory(const Inventory &copy) : raw(new AMateria *[1][4]) {
